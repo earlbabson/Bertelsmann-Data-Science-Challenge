@@ -1,0 +1,20 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+df <- read_csv("countries.csv")
+```
+
+```{r}
+df %>%
+  ggplot(aes(Country)) +
+  geom_bar(aes(fill = Country), width = 0.5) +
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.25) +
+  labs(x = "Countries", y = "Count") +
+  theme_bw() +
+  theme(legend.position="none")
+```
+
