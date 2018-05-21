@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def get_table(df, column_name):
-    """The function takes in a pandas dataframe and returns a frequency table 
+    """The function takes in a .csv file and returns a frequency table 
     with three columns – 
     Freq (Frequency), P (Proportion), and % (Percentage).
     """
