@@ -35,4 +35,4 @@ def calculate_stats(csv):
 
 
 team_data = calculate_stats('NHL.csv')
-team_data
+print(team_data)
