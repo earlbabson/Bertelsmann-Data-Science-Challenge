@@ -5,7 +5,7 @@ output: html_notebook
 
 ```{r}
 library(tidyverse)
-df <- read_csv("countries.csv")
+df <- read_csv("datasets/countries.csv")
 ```
 
 ```{r}

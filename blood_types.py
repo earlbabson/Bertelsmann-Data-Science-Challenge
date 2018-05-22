@@ -25,7 +25,7 @@ def get_table(df, column_name):
     
     
 
-result = get_table('blood_types.csv', 'Blood Type')
+result = get_table('datasets/blood_types.csv', 'Blood Type')
 
 plt.plot(result.loc['O':'AB', 'Freq'], ':', color = 'orange')
 plt.show()
