@@ -11,7 +11,7 @@ print('The mean is {:g}'.format(mean), '\n')
 devs = data - mean # deviations from the mean
 print(devs, '\n')
 
-avg_dev = np.sum(devs)/len(devs) # calculate the average deviation
+avg_dev = np.sum(devs)/len(data) # calculate the average deviation
 
 # the number we get is practically zero
 print('The average deviation equals {:.15f}'.format(avg_dev), '\n')
@@ -19,13 +19,13 @@ print('The average deviation equals {:.15f}'.format(avg_dev), '\n')
 abs_devs = np.absolute(devs) # convert to absolute values
 print(abs_devs, '\n')
 
-avg_absdev = np.sum(abs_devs)/len(abs_devs)
+avg_absdev = np.sum(abs_devs)/len(data)
 print('The average absolute deviation equals {:.2f}'.format(avg_absdev), '\n')
 
 sq_devs = devs**2 # calculate squared deviations
 print(sq_devs, '\n')
 
-variance = np.sum(sq_devs)/len(sq_devs)
+variance = np.sum(sq_devs)/len(data)
 print('The average squared deviation (variance) equals {:.2f}'.format(variance), '\n')
 
 print('The standard deviation equals {:.2f}'.format(np.sqrt(variance)), '\n')
@@ -41,7 +41,7 @@ def calculate_std(array):
     mean = np.mean(array)
     devs = array - mean
     sq_devs = devs**2
-    variance = np.sum(sq_devs)/len(sq_devs)
+    variance = np.sum(sq_devs)/len(array)
     std = np.sqrt(variance)
     return std
 
