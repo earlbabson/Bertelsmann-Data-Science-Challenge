@@ -27,8 +27,10 @@ def get_table(df, column_name):
 
 result = get_table('datasets/blood_types.csv', 'Blood Type')
 
-plt.plot(result.loc['O':'AB', 'Freq'], ':', color = 'orange')
-plt.show()
+with plt.style.context("seaborn-whitegrid"):
+    plt.figure(figsize=(7.5,5))
+    plt.plot(result.loc['O':'AB', 'Freq'], color='orange')
+    plt.show()
 
 
 # highlight the Total row (the total values we get are correct)
